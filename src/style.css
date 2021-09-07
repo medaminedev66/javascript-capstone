@@ -54,6 +54,52 @@ header nav ul li a {
   color: currentColor;
 }
 
+main {
+  margin: 4rem;
+}
+
+main .menuSection {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+main .menuSection .menuItem {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  width: 22%;
+  margin: 2rem 4rem;
+}
+
+main .menuSection .menuitem img {
+  width: 45px;
+  height: 45px;
+}
+
+main .menuSection .menuItem p {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+main .menuSection .menuItem button {
+  margin: 5px 7px;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #92817a;
+  color: #362417;
+  border: none;
+  border-radius: 5px;
+}
+
+main .menuSection .menuItem button:hover {
+  transform: scale(1.1);
+}
+
 footer {
   display: flex;
   position: fixed;
