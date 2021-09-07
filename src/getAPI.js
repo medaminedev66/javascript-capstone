@@ -16,6 +16,7 @@ const displayMenuItems = (meals) => {
 
     const icon = document.createElement('i');
     icon.className = 'far fa-heart';
+    icon.id = m.idMeal;
     para.appendChild(icon);
     li.appendChild(para);
 
