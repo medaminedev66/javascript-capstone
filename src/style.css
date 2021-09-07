@@ -76,12 +76,18 @@ footer span {
   left: 0;
   width: 100%;
   height: 100vh;
-  /* overflow-y: auto; */
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.432);
-  /* margin: 1rem auto 1rem auto; */
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s;
+}
+
+.active {
+  visibility: visible;
+  opacity: 1;
 }
 
 .popup {
@@ -122,6 +128,7 @@ footer span {
   width: 400px;
   height: auto;
   margin: 0.5rem auto 0.5rem auto;
+  border-radius: 1rem;
 }
 
 .popTitle {
