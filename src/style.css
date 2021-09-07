@@ -69,3 +69,44 @@ footer span {
   padding-left: 1rem;
   font-weight: 400;
 }
+
+.container {
+  overflow-y: auto;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 90%;
+  width: 90%;
+  background-color: #362417;
+  margin: 1rem;
+  flex-direction: column;
+}
+
+.fa-times-circle {
+  color: #f1dabf;
+  align-self: flex-end;
+  margin: 0.8rem;
+}
+
+.popImage {
+  width: 400px;
+  height: auto;
+  margin: 0.5rem auto 0.5rem auto;
+}
+
+.popTitle {
+  color: white;
+  text-align: center;
+}
+
+.characteristic {
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 350px;
+  justify-content: space-between;
+  margin: 0.5rem auto 0.5rem auto;
+}
