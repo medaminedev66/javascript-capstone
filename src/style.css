@@ -19,13 +19,21 @@ header {
   color: #362417;
 }
 
-header h1 {
+.logo {
+  display: flex;
   flex: 1;
   padding-left: 1rem;
+  align-items: center;
+}
+
+.logo img {
+  margin-right: 0.5rem;
+  width: 40px;
+  height: 40px;
 }
 
 header nav {
-    flex: 2;
+  flex: 2;
 }
 
 header nav ul {
