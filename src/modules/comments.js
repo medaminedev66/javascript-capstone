@@ -33,6 +33,7 @@ const generateComment = (element) => {
 
 const generatePopup = () => {
   const container = document.createElement('div');
+  const popup = document.createElement('div');
   const closeBtn = document.createElement('i');
   const popImage = document.createElement('img');
   //Meal info
@@ -66,10 +67,12 @@ const generatePopup = () => {
   ];
   const formChildren = [nameInput, commentInput, submit];
   formChildren.forEach((child) => createComment.appendChild(child));
-  children.forEach((child) => container.appendChild(child));
+  children.forEach((child) => popup.appendChild(child));
+  container.appendChild(popup);
   document.body.appendChild(container);
   //add classes
   container.className = 'container';
+  popup.className = 'popup';
   closeBtn.className = 'fas fa-times-circle';
   popImage.className = 'popImage';
   popTitle.className = 'popTitle';

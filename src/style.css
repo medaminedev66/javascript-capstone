@@ -71,19 +71,45 @@ footer span {
 }
 
 .container {
-  overflow-y: auto;
-  display: flex;
   position: fixed;
   top: 0;
   left: 0;
-  bottom: 0;
-  height: 90%;
-  width: 90%;
-  background-color: #362417;
-  margin: 1rem;
+  width: 100%;
+  height: 100vh;
+  /* overflow-y: auto; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.432);
+  /* margin: 1rem auto 1rem auto; */
+}
+
+.popup {
+  overflow-y: auto;
+  display: flex;
   flex-direction: column;
   align-items: center;
+  width: 85%;
+  height: 85%;
+  background-color: #362417;
   color: white;
+  border-radius: 1rem;
+}
+
+.popup::-webkit-scrollbar {
+  width: 0.3rem;
+}
+
+.popup::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 1px grey;
+  border-radius: 10px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.popup::-webkit-scrollbar-thumb {
+  background: #68462d;
+  border-radius: 10px;
 }
 
 .fa-times-circle {
