@@ -16,6 +16,21 @@ const generateInfo = (element) => {
   const children = [category, area, idMeal];
   children.forEach((child) => element.appendChild(child));
 };
+
+const generateComment = (element) => {
+  const comment = document.createElement('div');
+  const date = document.createElement('p');
+  const name = document.createElement('p');
+  const theComment = document.createElement('span');
+  date.innerText = '2015/02/12';
+  name.innerText = 'Rida';
+  theComment.innerText = 'mmm delicious, good meal';
+  const children = [date, name, theComment];
+  children.forEach((child) => comment.appendChild(child));
+  comment.className = 'comment';
+  element.appendChild(comment);
+};
+
 const generatePopup = () => {
   const container = document.createElement('div');
   const closeBtn = document.createElement('i');
@@ -25,12 +40,13 @@ const generatePopup = () => {
   const popCharacteristic = document.createElement('div');
   generateInfo(popCharacteristic);
   //Comments
+  const commentH3 = document.createElement('h3');
   const comments = document.createElement('div');
-  const comment = document.createElement('div');
-  const date = document.createElement('p');
-  const name = document.createElement('p');
-  const theComment = document.createElement('span');
+  generateComment(comments);
+  generateComment(comments);
+  generateComment(comments);
   //comment form
+  const createCommentH3 = document.createElement('h3');
   const createComment = document.createElement('form');
   const nameInput = document.createElement('input');
   nameInput.type = 'text';
@@ -43,12 +59,12 @@ const generatePopup = () => {
     popImage,
     popTitle,
     popCharacteristic,
+    commentH3,
     comments,
+    createCommentH3,
     createComment,
   ];
-  const commentsChildren = [comment, date, name, theComment];
   const formChildren = [nameInput, commentInput, submit];
-  commentsChildren.forEach((child) => comments.appendChild(child));
   formChildren.forEach((child) => createComment.appendChild(child));
   children.forEach((child) => container.appendChild(child));
   document.body.appendChild(container);
@@ -59,6 +75,8 @@ const generatePopup = () => {
   popTitle.className = 'popTitle';
   popCharacteristic.className = 'characteristic';
   //Content
+  commentH3.innerText = 'Comments (3)';
+  createCommentH3.innerText = 'Create a comment';
   popImage.src = meal;
   popTitle.innerText = 'Teriyaki Chicken Casserole';
 };

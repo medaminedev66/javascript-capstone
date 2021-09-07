@@ -82,6 +82,8 @@ footer span {
   background-color: #362417;
   margin: 1rem;
   flex-direction: column;
+  align-items: center;
+  color: white;
 }
 
 .fa-times-circle {
@@ -109,4 +111,14 @@ footer span {
   width: 350px;
   justify-content: space-between;
   margin: 0.5rem auto 0.5rem auto;
+}
+
+.comment {
+  display: flex;
+  gap: 1rem;
+  margin: 0.5rem auto 0.5rem auto;
+}
+
+h3 {
+  margin: 1rem 0 1rem 0;
 }
