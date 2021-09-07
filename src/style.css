@@ -75,8 +75,29 @@ main .menuSection .menuItem {
 }
 
 main .menuSection .menuitem img {
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
+}
+
+main .menuSection .menuItem p {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+main .menuSection .menuItem button {
+  margin: 5px 7px;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #92817a;
+  color: #362417;
+  border: none;
+  border-radius: 5px;
+}
+
+main .menuSection .menuItem button:hover {
+  transform: scale(1.1);
 }
 
 footer {
