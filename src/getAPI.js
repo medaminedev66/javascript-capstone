@@ -3,6 +3,8 @@ import { likeMeal, getLikes, displayLikes } from './likeItems.js';
 const involvementAPI = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps';
 const appId = 'oj8lCVSvVKOoKDOy43br';
 
+import generatePopup from './modules/comments.js';
+
 const getMenuData = async (url) => {
   const score = await fetch(url);
   return score.json();
@@ -35,7 +37,9 @@ const displayMenuItems = (meals) => {
     const btn = document.createElement('button');
     btn.innerText = 'Comment';
     btn.id = m.idMeal;
-
+    btn.addEventListener('click', () => {
+      generatePopup(m);
+    });
     li.appendChild(btn);
     document.getElementById('menuList').appendChild(li);
 
