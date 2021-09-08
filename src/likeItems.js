@@ -17,14 +17,4 @@ const getLikes = async (involvmentAPI, appId) => {
   return data;
 };
 
-const displayLikes = (id, data) => {
-  let numLike;
-  for (let i = 0; i < data.length; i += 1) {
-    if (data[i].item_id === id) {
-      numLike = data[i].likes;
-    }
-  }
-  return numLike;
-};
-
 export { likeMeal, getLikes, displayLikes };
