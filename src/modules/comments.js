@@ -1,3 +1,9 @@
+import { commentMeal, getComments } from './commentsApi.js';
+
+const involvementAPI =
+  'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps';
+const appId = 'oj8lCVSvVKOoKDOy43br';
+
 const generateInfo = (element, meal) => {
   const category = document.createElement('p');
   const textCategory = meal.strCategory;
@@ -27,6 +33,8 @@ const generateComment = (element) => {
 };
 
 const generatePopup = (meal) => {
+  // commentMeal(involvementAPI, appId, meal.idMeal);
+
   const container = document.createElement('div');
   const popup = document.createElement('div');
   const closeBtn = document.createElement('i');
@@ -41,13 +49,15 @@ const generatePopup = (meal) => {
   generateComment(comments);
   generateComment(comments);
   generateComment(comments);
+  // getComments(involvementAPI, appId, meal.idMeal);
 
   const createCommentH3 = document.createElement('h3');
   const createComment = document.createElement('form');
   const nameInput = document.createElement('input');
   nameInput.type = 'text';
-  const commentInput = document.createElement('input');
-  commentInput.type = 'text';
+  nameInput.placeholder = 'Name...';
+  const commentInput = document.createElement('textarea');
+  commentInput.placeholder = 'Comment...';
   const submit = document.createElement('button');
 
   const children = [
@@ -72,12 +82,17 @@ const generatePopup = (meal) => {
   popImage.className = 'popImage';
   popTitle.className = 'popTitle';
   popCharacteristic.className = 'characteristic';
+  createComment.className = 'createComment';
+  submit.className = 'submit';
+  nameInput.className = 'nameInput';
+  commentInput.className = 'commentInput';
   container.classList.add('active');
 
   commentH3.innerText = 'Comments (3)';
   createCommentH3.innerText = 'Create a comment';
   popImage.src = meal.strMealThumb;
   popTitle.innerText = meal.strMeal;
+  submit.innerText = 'Submit';
 
   closeBtn.addEventListener('click', () => {
     document.body.removeChild(container);
