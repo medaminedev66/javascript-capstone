@@ -1,4 +1,10 @@
-const commentMeal = async (involvmentAPI, appId, mealId) => {
+const commentMeal = async (
+  involvmentAPI,
+  appId,
+  mealId,
+  nameUser,
+  commentUser,
+) => {
   const comments = await fetch(`${involvmentAPI}/${appId}/comments`, {
     method: 'POST',
     headers: {
@@ -6,8 +12,8 @@ const commentMeal = async (involvmentAPI, appId, mealId) => {
     },
     body: JSON.stringify({
       item_id: mealId,
-      username: 'Jane',
-      comment: 'Hello',
+      username: nameUser,
+      comment: commentUser,
     }),
   });
   return comments.status === 201;
@@ -16,7 +22,8 @@ const getComments = async (involvmentAPI, appId, mealId) => {
   const comment = await fetch(
     `${involvmentAPI}/${appId}/comments/?item_id=${mealId}`,
   );
-  console.log(comment.json());
+  const data = await comment.json();
+  return data;
 };
 
 export { commentMeal, getComments };

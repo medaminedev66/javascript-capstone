@@ -18,14 +18,14 @@ const generateInfo = (element, meal) => {
   children.forEach((child) => element.appendChild(child));
 };
 
-const generateComment = (element) => {
+const generateComment = (element, user) => {
   const comment = document.createElement('div');
   const date = document.createElement('p');
   const name = document.createElement('p');
   const theComment = document.createElement('span');
-  date.innerText = '2015/02/12';
-  name.innerText = 'Rida';
-  theComment.innerText = 'mmm delicious, good meal';
+  date.innerText = user.creation_date;
+  name.innerText = user.username;
+  theComment.innerText = user.comment;
   const children = [date, name, theComment];
   children.forEach((child) => comment.appendChild(child));
   comment.className = 'comment';
@@ -46,10 +46,11 @@ const generatePopup = (meal) => {
 
   const commentH3 = document.createElement('h3');
   const comments = document.createElement('div');
-  generateComment(comments);
-  generateComment(comments);
-  generateComment(comments);
-  // getComments(involvementAPI, appId, meal.idMeal);
+  getComments(involvementAPI, appId, meal.idMeal).then((data) => {
+    data.forEach((user) => {
+      generateComment(comments, user);
+    });
+  });
 
   const createCommentH3 = document.createElement('h3');
   const createComment = document.createElement('form');
@@ -59,6 +60,7 @@ const generatePopup = (meal) => {
   const commentInput = document.createElement('textarea');
   commentInput.placeholder = 'Comment...';
   const submit = document.createElement('button');
+  submit.type = 'button';
 
   const children = [
     closeBtn,
@@ -96,6 +98,25 @@ const generatePopup = (meal) => {
 
   closeBtn.addEventListener('click', () => {
     document.body.removeChild(container);
+  });
+
+  submit.addEventListener('click', () => {
+    const d = new Date();
+    const user = {
+      creation_date: d.toISOString().slice(0, 10),
+      username: nameInput.value,
+      comment: commentInput.value,
+    };
+    commentMeal(
+      involvementAPI,
+      appId,
+      meal.idMeal,
+      user.username,
+      user.comment,
+    );
+    generateComment(comments, user);
+    nameInput.value = '';
+    commentInput.value = '';
   });
 };
 export default generatePopup;

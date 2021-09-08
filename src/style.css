@@ -215,3 +215,11 @@ h3 {
   padding: 0.5rem;
   align-self: flex-end;
 }
+
+.nameInput {
+  padding: 0.3rem;
+}
+
+.commentInput {
+  padding: 0.3rem;
+}
