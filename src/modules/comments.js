@@ -1,8 +1,7 @@
 import { commentMeal, getComments } from './commentsApi.js';
 
-const involvementAPI =
-  'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps';
-const appId = 'oj8lCVSvVKOoKDOy43br';
+const involvementAPI = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps';
+const appId = 'SdPyDAmNNIPTUZaw27JK';
 
 const generateInfo = (element, meal) => {
   const category = document.createElement('p');
@@ -90,7 +89,7 @@ const generatePopup = (meal) => {
   commentInput.className = 'commentInput';
   container.classList.add('active');
 
-  commentH3.innerText = 'Comments (3)';
+  commentH3.innerText = 'Comments ()';
   createCommentH3.innerText = 'Create a comment';
   popImage.src = meal.strMealThumb;
   popTitle.innerText = meal.strMeal;
