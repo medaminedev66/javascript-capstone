@@ -1,8 +1,7 @@
-import { likeMeal, getLikes, displayLikes } from './likeItems.js';
+import { likeMeal, getLikes } from './likeItems.js';
 import generatePopup from './modules/comments.js';
 
-const involvementAPI =
-  'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps';
+const involvementAPI = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps';
 const appId = 'SdPyDAmNNIPTUZaw27JK';
 
 const getMenuData = async (url) => {
@@ -13,7 +12,6 @@ const displayMenuItems = (meals) => {
   const mealsArray = meals.meals;
   mealsArray.forEach((m) => {
     let isLiked = false;
-    let active = false;
     const li = document.createElement('li');
     li.className = 'menuItem';
     li.id = 'innerItem';
@@ -71,9 +69,7 @@ const displayMenuItems = (meals) => {
             getLikes(involvementAPI, appId).then((data) => {
               data.forEach((item) => {
                 if (item.item_id === m.idMeal) {
-                  console.log(item);
                   spans.innerText = item.likes;
-                  active = true;
                 }
               });
             });

@@ -17,4 +17,4 @@ const getLikes = async (involvmentAPI, appId) => {
   return data;
 };
 
-export { likeMeal, getLikes, displayLikes };
+export { likeMeal, getLikes };
