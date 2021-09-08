@@ -1,9 +1,8 @@
 import { likeMeal, getLikes, displayLikes } from './likeItems.js';
+import generatePopup from './modules/comments.js';
 
 const involvementAPI = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps';
 const appId = 'oj8lCVSvVKOoKDOy43br';
-
-import generatePopup from './modules/comments.js';
 
 const getMenuData = async (url) => {
   const score = await fetch(url);
