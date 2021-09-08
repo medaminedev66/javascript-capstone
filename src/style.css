@@ -86,6 +86,11 @@ main .menuSection .menuItem p {
   font-weight: 500;
 }
 
+main .menuSection .menuItem .likeSpan {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
 main .menuSection .menuItem button {
   margin: 5px 7px;
   padding: 10px;
@@ -200,4 +205,42 @@ footer span {
 
 h3 {
   margin: 1rem 0 1rem 0;
+}
+
+.likeIcon {
+  color: red;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  main .menuSection {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  main .menuSection .menuItem {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    width: 40%;
+    margin: 2rem 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  main .menuSection {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  main .menuSection .menuItem {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    width: 90%;
+    margin: 2rem 2rem;
+  }
 }
