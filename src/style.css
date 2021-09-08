@@ -86,6 +86,11 @@ main .menuSection .menuItem p {
   font-weight: 500;
 }
 
+main .menuSection .menuItem .likeSpan {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
 main .menuSection .menuItem button {
   margin: 5px 7px;
   padding: 10px;
@@ -200,4 +205,8 @@ footer span {
 
 h3 {
   margin: 1rem 0 1rem 0;
+}
+
+.likeIcon {
+  color: red;
 }
