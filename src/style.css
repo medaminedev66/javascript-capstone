@@ -210,3 +210,39 @@ h3 {
 .likeIcon {
   color: red;
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  main .menuSection {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* flex-wrap: wrap; */
+  }
+  
+  main .menuSection .menuItem {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    width: 40%;
+    margin: 2rem 2rem;
+  }  
+}
+
+@media (max-width: 768px) {
+  main .menuSection {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* flex-wrap: wrap; */
+  }
+  
+  main .menuSection .menuItem {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    width: 90%;
+    margin: 2rem 2rem;
+  }  
+}
