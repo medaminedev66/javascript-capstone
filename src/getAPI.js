@@ -8,7 +8,7 @@ const getMenuData = async (url) => {
   const score = await fetch(url);
   return score.json();
 };
-const displayMenuItems = (meals, homeItems) => {
+const displayMenuItems = (meals) => {
   const mealsArray = meals.meals;
   mealsArray.forEach((m) => {
     let isLiked = false;
@@ -44,7 +44,7 @@ const displayMenuItems = (meals, homeItems) => {
       generatePopup(m);
     });
     li.appendChild(btn);
-    homeItems.appendChild(li);
+    document.getElementById('menuList').appendChild(li);
     if (isLiked === false) {
       aTag.classList.remove('likeIcon');
     } else {
