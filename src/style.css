@@ -18,6 +18,11 @@ header {
   color: #362417;
 }
 
+header h1 a {
+  text-decoration: none;
+  color: currentColor;
+}
+
 .logo {
   display: flex;
   flex: 1;
@@ -231,6 +236,14 @@ h3 {
 
 .likeIcon {
   color: red;
+}
+
+.invisible {
+  display: none;
+}
+
+.visible {
+  display: inline-block;
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
