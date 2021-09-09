@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "webpack.config.js",
+  "jest": {
+    "verbose": true,
+    "testEnvironment": "jsdom"
+  },
   "scripts": {
     "test": "jest",
     "start": "webpack serve --open",
@@ -21,6 +25,7 @@
   },
   "homepage": "https://github.com/medaminedev66/javascript-capstone#readme",
   "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.15.4",
     "babel-eslint": "^10.1.0",
     "css-loader": "^6.2.0",
     "eslint": "^7.32.0",
@@ -37,5 +42,6 @@
     "webpack": "^5.52.0",
     "webpack-cli": "^4.8.0",
     "webpack-dev-server": "^4.1.0"
-  }
+  },
+  "dependencies": {}
 }
