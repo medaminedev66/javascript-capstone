@@ -238,14 +238,6 @@ h3 {
   color: red;
 }
 
-.invisible {
-  display: none;
-}
-
-.visible {
-  display: inline-block;
-}
-
 @media (min-width: 768px) and (max-width: 1024px) {
   main .menuSection {
     list-style: none;
