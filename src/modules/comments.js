@@ -1,7 +1,6 @@
 import { commentMeal, getComments } from './commentsApi.js';
 
-const involvementAPI =
-  'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps';
+const involvementAPI = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps';
 const appId = 'SdPyDAmNNIPTUZaw27JK';
 
 const numberOfComments = async (involvementAPI, appId, id) => {
@@ -9,10 +8,8 @@ const numberOfComments = async (involvementAPI, appId, id) => {
   await getComments(involvementAPI, appId, id).then((data) => {
     data.forEach((user, index) => {
       number = index + 1;
-      // console.log(number);
     });
   });
-  // console.log(number);
   return number;
 };
 
@@ -142,4 +139,4 @@ const generatePopup = (meal) => {
     commentInput.value = '';
   });
 };
-export default generatePopup;
+export { generatePopup, numberOfComments };
