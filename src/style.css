@@ -170,6 +170,9 @@ footer span {
 }
 
 .fa-times-circle {
+  position: fixed;
+  top: 7.5%;
+  right: 7.5%;
   color: #f1dabf;
   align-self: flex-end;
   margin: 0.8rem;
@@ -178,7 +181,7 @@ footer span {
 .popImage {
   width: 400px;
   height: auto;
-  margin: 0.5rem auto 0.5rem auto;
+  margin: 1rem auto 1rem auto;
   border-radius: 1rem;
 }
 
@@ -189,12 +192,13 @@ footer span {
 
 .characteristic {
   color: white;
+  font-size: 15px;
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
   width: 350px;
   justify-content: space-between;
-  margin: 0.5rem auto 0.5rem auto;
+  margin: 1rem auto 1rem auto;
 }
 
 .comment {
