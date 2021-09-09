@@ -6,9 +6,7 @@ describe('Counter Function Test', () => {
     const testLength = counter(testArray);
     expect(testLength).toBe(5);
   });
-});
 
-describe('Counter Function Test', () => {
   test('Return testArray length', () => {
     const testArray = [{ name: 'Rida' }, { lastName: 'Arif' }, { DOB: '07-06-98' }];
     const testLength = counter(testArray);

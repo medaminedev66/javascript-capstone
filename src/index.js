@@ -15,58 +15,43 @@ const seaItems = document.querySelector('.seaList');
 
 getMenuData(`${getDataAPI}search.php?f=b`).then((meals) => {
   displayMenuItems(meals, homeList);
-});
-
-getMenuData(`${getDataAPI}search.php?f=b`).then((meals) => {
   const mealsA = meals.meals;
   const itemsLength = countMenuItems(mealsA);
   allItems.innerText = `Home (${itemsLength})`;
+  main.addEventListener('click', () => {
+    displayMenuItems(meals, homeList);
+    homeItems.innerHTML = '';
+    seaItems.innerHTML = '';
+    indianItmes.innerHTML = '';
+  });
+  allItems.addEventListener('click', () => {
+    displayMenuItems(meals, homeItems);
+    homeList.innerHTML = '';
+    seaItems.innerHTML = '';
+    indianItmes.innerHTML = '';
+  });
 });
 
 getMenuData(`${getDataAPI}filter.php?c=Seafood`).then((meals) => {
   const mealsA = meals.meals;
   const itemsLength = countMenuItems(mealsA);
   seaFood.innerText = `Sea Food (${itemsLength})`;
+  seaFood.addEventListener('click', () => {
+    displayMenuItems(meals, seaItems);
+    homeList.innerHTML = '';
+    homeItems.innerHTML = '';
+    indianItmes.innerHTML = '';
+  });
 });
 
 getMenuData(`${getDataAPI}filter.php?a=Canadian`).then((meals) => {
   const mealsA = meals.meals;
   const itemsLength = countMenuItems(mealsA);
   indianFood.innerText = `Candian Food (${itemsLength})`;
-});
-
-main.addEventListener('click', () => {
-  getMenuData(`${getDataAPI}search.php?f=b`).then((meals) => {
-    displayMenuItems(meals, homeList);
-  });
-  homeItems.innerHTML = '';
-  seaItems.innerHTML = '';
-  indianItmes.innerHTML = '';
-});
-
-allItems.addEventListener('click', () => {
-  getMenuData(`${getDataAPI}search.php?f=b`).then((meals) => {
-    displayMenuItems(meals, homeItems);
-  });
-  homeList.innerHTML = '';
-  seaItems.innerHTML = '';
-  indianItmes.innerHTML = '';
-});
-
-indianFood.addEventListener('click', () => {
-  getMenuData(`${getDataAPI}filter.php?a=Canadian`).then((meals) => {
+  indianFood.addEventListener('click', () => {
     displayMenuItems(meals, indianItmes);
+    homeList.innerHTML = '';
+    homeItems.innerHTML = '';
+    seaItems.innerHTML = '';
   });
-  homeList.innerHTML = '';
-  homeItems.innerHTML = '';
-  seaItems.innerHTML = '';
-});
-
-seaFood.addEventListener('click', () => {
-  getMenuData(`${getDataAPI}filter.php?c=Seafood`).then((meals) => {
-    displayMenuItems(meals, seaItems);
-  });
-  homeList.innerHTML = '';
-  homeItems.innerHTML = '';
-  indianItmes.innerHTML = '';
 });
