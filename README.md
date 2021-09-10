@@ -9,6 +9,8 @@ The JavaScript capstone project is about building our own web application based 
 - In this project we practice to give review to each other.
 - We follow `Gitflow` for this project and solve `git conflicts`
 
+[Project documentation video](https://youtu.be/nEaRUSVVYCo)
+ 
 =======
 
 ## Built with
