@@ -1,6 +1,6 @@
-import { numberOfComments } from './src/modules/comments.js';
+import { numberOfComments } from '../modules/comments.js';
 
-jest.mock('./src/modules/commentsApi.js');
+jest.mock('../modules/commentsApi.js');
 
 describe('test numberOfComments function', () => {
   let comments = [{ a: 1 }, { b: 2 }, { c: 3 }];

@@ -1,4 +1,4 @@
-const counter = require('../counter.js');
+const counter = require('../modules/counter.js');
 
 describe('Counter Function Test', () => {
   test('Return testArray length', () => {

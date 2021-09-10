@@ -1,7 +1,7 @@
 import './index.html';
 import './style.css';
-import { getMenuData, displayMenuItems } from './getAPI.js';
-import countMenuItems from './counter.js';
+import { getMenuData, displayMenuItems } from './modules/getAPI.js';
+import countMenuItems from './modules/counter.js';
 
 const getDataAPI = 'https://www.themealdb.com/api/json/v1/1/';
 const main = document.querySelector('.homeCounter');

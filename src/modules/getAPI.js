@@ -1,5 +1,5 @@
 import { likeMeal, getLikes } from './likeItems.js';
-import { generatePopup } from './modules/comments.js';
+import { generatePopup } from './comments.js';
 
 const involvementAPI = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps';
 const appId = 'SdPyDAmNNIPTUZaw27JK';
