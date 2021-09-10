@@ -1,43 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Rubik&display=swap');
+
 * {
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Rubik', sans-serif;
 }
 
 body {
-  background-color: #f1dabf;
+  background-color: #f0e9e1;
 }
 
 header {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  height: 3rem;
+  flex-direction: column;
+  height: auto;
   align-items: center;
-  background-color: #92817a;
-  color: #362417;
+  justify-content: center;
+  background-color: #cdc3b6;
+  color: #252426;
+  font-family: 'Libre Baskerville', serif;
+  padding: 0.5rem;
 }
 
 header h1 a {
   text-decoration: none;
   color: currentColor;
+  font-family: 'Libre Baskerville', serif;
+  font-size: xx-large;
 }
 
 .logo {
   display: flex;
   flex: 1;
-  padding-left: 1rem;
   align-items: center;
 }
 
 .logo img {
-  margin-right: 0.5rem;
-  width: 40px;
+  width: 60px;
   height: 40px;
 }
 
 header nav {
   flex: 2;
+  margin: auto;
 }
 
 header nav ul {
@@ -45,18 +50,18 @@ header nav ul {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  font-size: large;
+  font-size: small;
   font-weight: 400;
-  padding: 15px;
 }
 
 header nav ul li {
-  padding: 0 20px;
+  padding: 0.5rem 0.5rem;
 }
 
 header nav ul li a {
   text-decoration: none;
   color: currentColor;
+  font-family: 'Merriweather', serif;
 }
 
 main {
@@ -84,9 +89,15 @@ main .menuSection .menuitem img {
   height: 45px;
 }
 
+.meal-image {
+  border-style: double;
+  border-inline: 2px double;
+}
+
 main .menuSection .menuItem p {
   display: flex;
   justify-content: space-between;
+  font-family: 'Merriweather', serif;
   margin-top: 10px;
   font-weight: 500;
 }
@@ -100,10 +111,10 @@ main .menuSection .menuItem button {
   margin: 5px 7px;
   padding: 10px;
   font-size: 16px;
-  background-color: #92817a;
-  color: #362417;
+  background-color: #252426;
+  color: #e0d7cf;
   border: none;
-  border-radius: 5px;
+  border-radius: 0;
 }
 
 main .menuSection .menuItem button:hover {
@@ -112,11 +123,9 @@ main .menuSection .menuItem button:hover {
 
 footer {
   display: flex;
-  position: fixed;
-  bottom: 0;
   width: 100%;
-  background-color: #92817a;
-  color: #362417;
+  background-color: #252426;
+  color: #e0d7cf;
   height: 2.5rem;
   align-items: center;
 }
@@ -128,7 +137,7 @@ footer span {
 
 .container {
   position: fixed;
-  top: 0;
+  bottom: 0;
   left: 0;
   width: 100%;
   height: 100vh;
@@ -136,14 +145,6 @@ footer span {
   justify-content: center;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.432);
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 0s, opacity 0.5s;
-}
-
-.active {
-  visibility: visible;
-  opacity: 1;
 }
 
 .popup {
@@ -153,9 +154,25 @@ footer span {
   align-items: center;
   width: 85%;
   height: 85%;
-  background-color: #362417;
-  color: white;
+  background-color: #252426;
+  color: #e0d7cf;
   border-radius: 1rem;
+  z-index: 10;
+  animation: drop 0.5s ease forwards;
+}
+
+@keyframes drop {
+  0% {
+    transform: translateY(100%);
+  }
+
+  70% {
+    transform: translateY(-20%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
 }
 
 .popup::-webkit-scrollbar {
@@ -170,14 +187,14 @@ footer span {
 }
 
 .popup::-webkit-scrollbar-thumb {
-  background: #68462d;
+  background: #cdc3b6;
   border-radius: 10px;
 }
 
 .fa-times-circle {
-  position: fixed;
-  top: 7.5%;
-  right: 7.5%;
+  position: sticky;
+  top: 0.8rem;
+  right: 0;
   color: #f1dabf;
   align-self: flex-end;
   margin: 0.8rem;
@@ -186,17 +203,15 @@ footer span {
 .popImage {
   width: 400px;
   height: auto;
-  margin: 1rem auto 1rem auto;
+  margin: 0 auto 1rem auto;
   border-radius: 1rem;
 }
 
 .popTitle {
-  color: white;
   text-align: center;
 }
 
 .characteristic {
-  color: white;
   font-size: 15px;
   display: flex;
   flex-wrap: wrap;
@@ -242,7 +257,22 @@ h3 {
   color: red;
 }
 
+@media (min-width: 768px) {
+  header nav ul {
+    font-size: large;
+  }
+
+  header nav ul li {
+    padding: 1rem;
+    padding-bottom: 0;
+  }
+}
+
 @media (min-width: 768px) and (max-width: 1024px) {
+  header nav ul {
+    font-size: large;
+  }
+
   main .menuSection {
     list-style: none;
     display: flex;

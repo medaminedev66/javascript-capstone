@@ -17,7 +17,7 @@ getMenuData(`${getDataAPI}search.php?f=b`).then((meals) => {
   displayMenuItems(meals, homeList);
   const mealsA = meals.meals;
   const itemsLength = countMenuItems(mealsA);
-  allItems.innerText = `Home (${itemsLength})`;
+  allItems.innerText = `HOME (${itemsLength})`;
   main.addEventListener('click', () => {
     displayMenuItems(meals, homeList);
     homeItems.innerHTML = '';
@@ -35,7 +35,7 @@ getMenuData(`${getDataAPI}search.php?f=b`).then((meals) => {
 getMenuData(`${getDataAPI}search.php?f=s`).then((meals) => {
   const mealsA = meals.meals;
   const itemsLength = countMenuItems(mealsA);
-  seaFood.innerText = `Continental (${itemsLength})`;
+  seaFood.innerText = `CONTINENTAL (${itemsLength})`;
   seaFood.addEventListener('click', () => {
     displayMenuItems(meals, seaItems);
     homeList.innerHTML = '';
@@ -47,7 +47,7 @@ getMenuData(`${getDataAPI}search.php?f=s`).then((meals) => {
 getMenuData(`${getDataAPI}filter.php?a=Canadian`).then((meals) => {
   const mealsA = meals.meals;
   const itemsLength = countMenuItems(mealsA);
-  indianFood.innerText = `Candian Food (${itemsLength})`;
+  indianFood.innerText = `CANADIAN FOOD (${itemsLength})`;
   indianFood.addEventListener('click', () => {
     displayMenuItems(meals, indianItmes);
     homeList.innerHTML = '';

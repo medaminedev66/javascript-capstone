@@ -16,6 +16,7 @@ const displayMenuItems = (meals, homeItems) => {
     li.className = 'menuItem';
     li.id = 'innerItem';
     const image = document.createElement('img');
+    image.className = 'meal-image';
     image.src = m.strMealThumb;
     li.appendChild(image);
     const para = document.createElement('p');
