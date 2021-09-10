@@ -1,11 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Rubik&display=swap');
+
+/* @font-face {
+  font-family: 'ING Me';
+  src: url('//db.onlinewebfonts.com/t/69c633b2a4e41e8101c6f4f149655d5e.eot');
+} */
+
 * {
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Rubik', sans-serif;
 }
 
 body {
-  background-color: #f1dabf;
+  background-color: #f0e9e1;
 }
 
 header {
@@ -14,13 +21,15 @@ header {
   justify-content: space-between;
   height: 3rem;
   align-items: center;
-  background-color: #92817a;
-  color: #362417;
+  background-color: #cdc3b6;
+  color: #252426;
+  font-family: 'Libre Baskerville', serif;
 }
 
 header h1 a {
   text-decoration: none;
   color: currentColor;
+  font-family: 'Libre Baskerville', serif;
 }
 
 .logo {
@@ -57,6 +66,7 @@ header nav ul li {
 header nav ul li a {
   text-decoration: none;
   color: currentColor;
+  font-family: 'Merriweather', serif;
 }
 
 main {
@@ -87,6 +97,7 @@ main .menuSection .menuitem img {
 main .menuSection .menuItem p {
   display: flex;
   justify-content: space-between;
+  font-family: 'Merriweather', serif;
   margin-top: 10px;
   font-weight: 500;
 }
@@ -100,8 +111,8 @@ main .menuSection .menuItem button {
   margin: 5px 7px;
   padding: 10px;
   font-size: 16px;
-  background-color: #92817a;
-  color: #362417;
+  background-color: #252426;
+  color: #e0d7cf;
   border: none;
   border-radius: 5px;
 }
@@ -112,11 +123,9 @@ main .menuSection .menuItem button:hover {
 
 footer {
   display: flex;
-  position: fixed;
-  bottom: 0;
   width: 100%;
-  background-color: #92817a;
-  color: #362417;
+  background-color: #252426;
+  color: #e0d7cf;
   height: 2.5rem;
   align-items: center;
 }
@@ -145,8 +154,8 @@ footer span {
   align-items: center;
   width: 85%;
   height: 85%;
-  background-color: #362417;
-  color: white;
+  background-color: #252426;
+  color: #e0d7cf;
   border-radius: 1rem;
   z-index: 10;
   animation: myMove 0.5s ease forwards;
@@ -199,12 +208,10 @@ footer span {
 }
 
 .popTitle {
-  color: white;
   text-align: center;
 }
 
 .characteristic {
-  color: white;
   font-size: 15px;
   display: flex;
   flex-wrap: wrap;
