@@ -32,10 +32,10 @@ getMenuData(`${getDataAPI}search.php?f=b`).then((meals) => {
   });
 });
 
-getMenuData(`${getDataAPI}filter.php?c=Seafood`).then((meals) => {
+getMenuData(`${getDataAPI}search.php?f=s`).then((meals) => {
   const mealsA = meals.meals;
   const itemsLength = countMenuItems(mealsA);
-  seaFood.innerText = `SEA FOOD (${itemsLength})`;
+  seaFood.innerText = `CONTINENTAL (${itemsLength})`;
   seaFood.addEventListener('click', () => {
     displayMenuItems(meals, seaItems);
     homeList.innerHTML = '';
