@@ -56,7 +56,7 @@ If you want a copy of this file go to the github repository and download it from
 
 ### Live 
 
-  [LiveDemo](https://medaminedev66.github.io/javascript-capstone/dist/)
+  [LiveDemo](https://medaminedev66.github.io/javascript-capstone/)
 
 ### Setup
 
