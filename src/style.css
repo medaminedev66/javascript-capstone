@@ -17,36 +17,37 @@ body {
 
 header {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  height: 3rem;
+  flex-direction: column;
+  height: auto;
   align-items: center;
+  justify-content: center;
   background-color: #cdc3b6;
   color: #252426;
   font-family: 'Libre Baskerville', serif;
+  padding: 0.5rem;
 }
 
 header h1 a {
   text-decoration: none;
   color: currentColor;
   font-family: 'Libre Baskerville', serif;
+  font-size: xx-large;
 }
 
 .logo {
   display: flex;
   flex: 1;
-  padding-left: 1rem;
   align-items: center;
 }
 
 .logo img {
-  margin-right: 0.5rem;
-  width: 40px;
+  width: 60px;
   height: 40px;
 }
 
 header nav {
   flex: 2;
+  margin: auto;
 }
 
 header nav ul {
@@ -54,13 +55,12 @@ header nav ul {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  font-size: large;
+  font-size: small;
   font-weight: 400;
-  padding: 15px;
 }
 
 header nav ul li {
-  padding: 0 20px;
+  padding: 0.5rem 0.5rem;
 }
 
 header nav ul li a {
@@ -94,6 +94,11 @@ main .menuSection .menuitem img {
   height: 45px;
 }
 
+.meal-image {
+  border-style: double;
+  border-inline: 2px double;
+}
+
 main .menuSection .menuItem p {
   display: flex;
   justify-content: space-between;
@@ -114,7 +119,7 @@ main .menuSection .menuItem button {
   background-color: #252426;
   color: #e0d7cf;
   border: none;
-  border-radius: 5px;
+  border-radius: 0;
 }
 
 main .menuSection .menuItem button:hover {
@@ -257,7 +262,22 @@ h3 {
   color: red;
 }
 
+@media (min-width: 768px) {
+  header nav ul {
+    font-size: large;
+  }
+
+  header nav ul li {
+    padding: 1rem;
+    padding-bottom: 0;
+  }
+}
+
 @media (min-width: 768px) and (max-width: 1024px) {
+  header nav ul {
+    font-size: large;
+  }
+
   main .menuSection {
     list-style: none;
     display: flex;
