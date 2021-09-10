@@ -1,10 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Rubik&display=swap');
 
-/* @font-face {
-  font-family: 'ING Me';
-  src: url('//db.onlinewebfonts.com/t/69c633b2a4e41e8101c6f4f149655d5e.eot');
-} */
-
 * {
   margin: 0;
   padding: 0;
@@ -163,10 +158,10 @@ footer span {
   color: #e0d7cf;
   border-radius: 1rem;
   z-index: 10;
-  animation: myMove 0.5s ease forwards;
+  animation: drop 0.5s ease forwards;
 }
 
-@keyframes myMove {
+@keyframes drop {
   0% {
     transform: translateY(100%);
   }
@@ -192,13 +187,13 @@ footer span {
 }
 
 .popup::-webkit-scrollbar-thumb {
-  background: #68462d;
+  background: #cdc3b6;
   border-radius: 10px;
 }
 
 .fa-times-circle {
-  position: fixed;
-  top: 0;
+  position: sticky;
+  top: 0.8rem;
   right: 0;
   color: #f1dabf;
   align-self: flex-end;
@@ -208,7 +203,7 @@ footer span {
 .popImage {
   width: 400px;
   height: auto;
-  margin: 1rem auto 1rem auto;
+  margin: 0 auto 1rem auto;
   border-radius: 1rem;
 }
 
