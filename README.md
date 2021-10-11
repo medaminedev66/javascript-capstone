@@ -1,6 +1,6 @@
 # Javascript-Capstone
 
-The JavaScript capstone project is about building our own web application based on an external API. The webapp have 2 user interfaces:
+The JavaScript capstone project (World Food) is about building our own web application based on an external API. The webapp have 2 user interfaces:
 
 - A `Home Page` displying items that you can `like`
 - A `Comment` button on home page display a `Popup window` with more detail about item.
